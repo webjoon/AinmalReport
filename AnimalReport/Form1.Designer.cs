@@ -124,6 +124,7 @@
             this.btnInput.TabIndex = 5;
             this.btnInput.Text = "Input";
             this.btnInput.UseVisualStyleBackColor = true;
+            this.btnInput.Click += new System.EventHandler(this.btnInput_Click);
             // 
             // label5
             // 

@@ -29,37 +29,74 @@
         private void InitializeComponent()
         {
             this.DescPanel = new System.Windows.Forms.Panel();
+            this.labelAddress = new System.Windows.Forms.Label();
+            this.labelLastName = new System.Windows.Forms.Label();
+            this.labelFrisstName = new System.Windows.Forms.Label();
             this.CusInputPanel = new System.Windows.Forms.Panel();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtBirthday = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtFirstName = new System.Windows.Forms.TextBox();
-            this.btnInput = new System.Windows.Forms.Button();
+            this.BtnInput = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.CusListBoxPanel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ListCustomer = new System.Windows.Forms.ListBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescPanel.SuspendLayout();
             this.CusInputPanel.SuspendLayout();
             this.CusListBoxPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // DescPanel
             // 
+            this.DescPanel.Controls.Add(this.labelAddress);
+            this.DescPanel.Controls.Add(this.labelLastName);
+            this.DescPanel.Controls.Add(this.labelFrisstName);
             this.DescPanel.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DescPanel.Location = new System.Drawing.Point(457, 12);
             this.DescPanel.Name = "DescPanel";
             this.DescPanel.Size = new System.Drawing.Size(319, 315);
             this.DescPanel.TabIndex = 0;
+            // 
+            // labelAddress
+            // 
+            this.labelAddress.AutoSize = true;
+            this.labelAddress.Location = new System.Drawing.Point(17, 81);
+            this.labelAddress.Name = "labelAddress";
+            this.labelAddress.Size = new System.Drawing.Size(54, 21);
+            this.labelAddress.TabIndex = 2;
+            this.labelAddress.Text = "label6";
+            // 
+            // labelLastName
+            // 
+            this.labelLastName.AutoSize = true;
+            this.labelLastName.Location = new System.Drawing.Point(17, 47);
+            this.labelLastName.Name = "labelLastName";
+            this.labelLastName.Size = new System.Drawing.Size(54, 21);
+            this.labelLastName.TabIndex = 1;
+            this.labelLastName.Text = "label6";
+            // 
+            // labelFrisstName
+            // 
+            this.labelFrisstName.AutoSize = true;
+            this.labelFrisstName.Location = new System.Drawing.Point(17, 13);
+            this.labelFrisstName.Name = "labelFrisstName";
+            this.labelFrisstName.Size = new System.Drawing.Size(54, 21);
+            this.labelFrisstName.TabIndex = 0;
+            this.labelFrisstName.Text = "label6";
             // 
             // CusInputPanel
             // 
@@ -68,14 +105,14 @@
             this.CusInputPanel.Controls.Add(this.txtAddress);
             this.CusInputPanel.Controls.Add(this.txtLastName);
             this.CusInputPanel.Controls.Add(this.txtFirstName);
-            this.CusInputPanel.Controls.Add(this.btnInput);
+            this.CusInputPanel.Controls.Add(this.BtnInput);
             this.CusInputPanel.Controls.Add(this.label5);
             this.CusInputPanel.Controls.Add(this.label4);
             this.CusInputPanel.Controls.Add(this.label3);
             this.CusInputPanel.Controls.Add(this.label2);
             this.CusInputPanel.Controls.Add(this.label1);
             this.CusInputPanel.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CusInputPanel.Location = new System.Drawing.Point(372, 145);
+            this.CusInputPanel.Location = new System.Drawing.Point(378, 147);
             this.CusInputPanel.Name = "CusInputPanel";
             this.CusInputPanel.Size = new System.Drawing.Size(319, 233);
             this.CusInputPanel.TabIndex = 1;
@@ -115,15 +152,17 @@
             this.txtFirstName.Size = new System.Drawing.Size(173, 29);
             this.txtFirstName.TabIndex = 6;
             // 
-            // btnInput
+            // BtnInput
             // 
-            this.btnInput.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInput.Location = new System.Drawing.Point(101, 199);
-            this.btnInput.Name = "btnInput";
-            this.btnInput.Size = new System.Drawing.Size(108, 31);
-            this.btnInput.TabIndex = 5;
-            this.btnInput.Text = "Input";
-            this.btnInput.UseVisualStyleBackColor = true;
+            this.BtnInput.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.BtnInput.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnInput.Location = new System.Drawing.Point(101, 199);
+            this.BtnInput.Name = "BtnInput";
+            this.BtnInput.Size = new System.Drawing.Size(108, 31);
+            this.BtnInput.TabIndex = 5;
+            this.BtnInput.Text = "Input";
+            this.BtnInput.UseVisualStyleBackColor = true;
+            this.BtnInput.Click += new System.EventHandler(this.BtnInput_Click);
             // 
             // label5
             // 
@@ -182,12 +221,31 @@
             // 
             // CusListBoxPanel
             // 
+            this.CusListBoxPanel.Controls.Add(this.panel1);
             this.CusListBoxPanel.Controls.Add(this.dataGridView1);
             this.CusListBoxPanel.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CusListBoxPanel.Location = new System.Drawing.Point(12, 12);
             this.CusListBoxPanel.Name = "CusListBoxPanel";
             this.CusListBoxPanel.Size = new System.Drawing.Size(319, 315);
             this.CusListBoxPanel.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.ListCustomer);
+            this.panel1.Location = new System.Drawing.Point(61, 237);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(299, 167);
+            this.panel1.TabIndex = 3;
+            // 
+            // ListCustomer
+            // 
+            this.ListCustomer.FormattingEnabled = true;
+            this.ListCustomer.ItemHeight = 21;
+            this.ListCustomer.Location = new System.Drawing.Point(3, 3);
+            this.ListCustomer.Name = "ListCustomer";
+            this.ListCustomer.Size = new System.Drawing.Size(120, 88);
+            this.ListCustomer.TabIndex = 0;
+            this.ListCustomer.Click += new System.EventHandler(this.ListCustomer_Click);
             // 
             // dataGridView1
             // 
@@ -201,6 +259,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -234,14 +293,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.CusListBoxPanel);
             this.Controls.Add(this.CusInputPanel);
+            this.Controls.Add(this.CusListBoxPanel);
             this.Controls.Add(this.DescPanel);
             this.Name = "CusMain";
             this.Text = "CusMain";
+            this.DescPanel.ResumeLayout(false);
+            this.DescPanel.PerformLayout();
             this.CusInputPanel.ResumeLayout(false);
             this.CusInputPanel.PerformLayout();
             this.CusListBoxPanel.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -256,7 +318,7 @@
         private TextBox txtAddress;
         private TextBox txtLastName;
         private TextBox txtFirstName;
-        private Button btnInput;
+        private Button BtnInput;
         private Label label5;
         private Label label4;
         private Label label3;
@@ -269,5 +331,10 @@
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
+        private Panel panel1;
+        private ListBox ListCustomer;
+        private Label labelAddress;
+        private Label labelLastName;
+        private Label labelFrisstName;
     }
 }

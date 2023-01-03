@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\source\\repos\\NewRepo\\AnimalReport\\AnimalReport.csproj": {}
+    "C:\\Users\\admin\\source\\repos\\webjoon\\AinmalReport\\AnimalReport\\AnimalReport.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\source\\repos\\NewRepo\\AnimalReport\\AnimalReport.csproj": {
+    "C:\\Users\\admin\\source\\repos\\webjoon\\AinmalReport\\AnimalReport\\AnimalReport.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\source\\repos\\NewRepo\\AnimalReport\\AnimalReport.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\source\\repos\\webjoon\\AinmalReport\\AnimalReport\\AnimalReport.csproj",
         "projectName": "AnimalReport",
-        "projectPath": "C:\\Users\\admin\\source\\repos\\NewRepo\\AnimalReport\\AnimalReport.csproj",
+        "projectPath": "C:\\Users\\admin\\source\\repos\\webjoon\\AinmalReport\\AnimalReport\\AnimalReport.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\source\\repos\\NewRepo\\AnimalReport\\obj\\",
+        "outputPath": "C:\\Users\\admin\\source\\repos\\webjoon\\AinmalReport\\AnimalReport\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -61,7 +61,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

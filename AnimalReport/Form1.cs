@@ -31,18 +31,14 @@ namespace AnimalReport
 
         private void BtnInput_Click(object sender, EventArgs e)
         {
+            //List<int> intListTest = new List<int>();
+
             CustomerArrary[CustomerArrayIndex] = new Customer(txtFirstName.Text, txtLastName.Text, txtAddress.Text, txtDescription.Text, DateTime.Parse(txtBirthday.Text));
 
 
             ListCustomer.Items.Add(CustomerArrary[CustomerArrayIndex].FirstName);
             CustomerArrayIndex++;
-            /*
-            for(int i = 0; i < custormerArrary20.Length; i++)
-            {
-
-            }
-            */
-            // cus.Add(i) = new Customer(txtFirstName.Text, txtLastName.Text, txtAddress.Text, txtDescription.Text, DateTime.Parse(txtBirthday.Text));
+            
         }
 
         private void ListCustomer_Click(object sender, EventArgs e)
@@ -61,6 +57,20 @@ namespace AnimalReport
                     }
                 }
             }
+        }
+
+        private void CusMain_Load(object sender, EventArgs e)
+        {
+            CusListBoxPanel.Dock = DockStyle.Left;
+            DescPanel.Dock = DockStyle.Right;
+            CusInputPanel.Dock = DockStyle.Right;
+            CusInputPanel.Visible = false;
+        }
+
+        private void inputCustomerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CusInputPanel.Visible = true;
+            DescPanel.Visible = false;
         }
     }
 }

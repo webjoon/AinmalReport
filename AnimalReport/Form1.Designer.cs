@@ -53,11 +53,14 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.inputCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DescPanel.SuspendLayout();
             this.CusInputPanel.SuspendLayout();
             this.CusListBoxPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // DescPanel
@@ -66,7 +69,7 @@
             this.DescPanel.Controls.Add(this.labelLastName);
             this.DescPanel.Controls.Add(this.labelFrisstName);
             this.DescPanel.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DescPanel.Location = new System.Drawing.Point(457, 12);
+            this.DescPanel.Location = new System.Drawing.Point(469, 27);
             this.DescPanel.Name = "DescPanel";
             this.DescPanel.Size = new System.Drawing.Size(319, 315);
             this.DescPanel.TabIndex = 0;
@@ -112,7 +115,7 @@
             this.CusInputPanel.Controls.Add(this.label2);
             this.CusInputPanel.Controls.Add(this.label1);
             this.CusInputPanel.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CusInputPanel.Location = new System.Drawing.Point(378, 147);
+            this.CusInputPanel.Location = new System.Drawing.Point(378, 132);
             this.CusInputPanel.Name = "CusInputPanel";
             this.CusInputPanel.Size = new System.Drawing.Size(319, 233);
             this.CusInputPanel.TabIndex = 1;
@@ -224,7 +227,7 @@
             this.CusListBoxPanel.Controls.Add(this.panel1);
             this.CusListBoxPanel.Controls.Add(this.dataGridView1);
             this.CusListBoxPanel.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CusListBoxPanel.Location = new System.Drawing.Point(12, 12);
+            this.CusListBoxPanel.Location = new System.Drawing.Point(12, 27);
             this.CusListBoxPanel.Name = "CusListBoxPanel";
             this.CusListBoxPanel.Size = new System.Drawing.Size(319, 315);
             this.CusListBoxPanel.TabIndex = 2;
@@ -256,11 +259,12 @@
             this.Column3,
             this.Column4,
             this.Column5});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(319, 315);
             this.dataGridView1.TabIndex = 0;
             // 
             // Column1
@@ -288,16 +292,36 @@
             this.Column5.HeaderText = "Description";
             this.Column5.Name = "Column5";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.inputCustomerToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // inputCustomerToolStripMenuItem
+            // 
+            this.inputCustomerToolStripMenuItem.Name = "inputCustomerToolStripMenuItem";
+            this.inputCustomerToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
+            this.inputCustomerToolStripMenuItem.Text = "InputCustomer";
+            this.inputCustomerToolStripMenuItem.Click += new System.EventHandler(this.inputCustomerToolStripMenuItem_Click);
+            // 
             // CusMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.CusInputPanel);
             this.Controls.Add(this.CusListBoxPanel);
             this.Controls.Add(this.DescPanel);
+            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.CusInputPanel);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "CusMain";
             this.Text = "CusMain";
+            this.Load += new System.EventHandler(this.CusMain_Load);
             this.DescPanel.ResumeLayout(false);
             this.DescPanel.PerformLayout();
             this.CusInputPanel.ResumeLayout(false);
@@ -305,7 +329,10 @@
             this.CusListBoxPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -336,5 +363,7 @@
         private Label labelAddress;
         private Label labelLastName;
         private Label labelFrisstName;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem inputCustomerToolStripMenuItem;
     }
 }

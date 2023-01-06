@@ -37,7 +37,8 @@ namespace AnimalReport
 
 
             ListCustomer.Items.Add(CustomerArrary[CustomerArrayIndex].FirstName);
-            CustomerArrayIndex++;
+            dataGridView1.Rows.Add(CustomerArrary[CustomerArrayIndex].FirstName, CustomerArrary[CustomerArrayIndex].LastName);
+            CustomerArrayIndex++;-===
             
         }
 
@@ -71,6 +72,11 @@ namespace AnimalReport
         {
             CusInputPanel.Visible = true;
             DescPanel.Visible = false;
+        }
+
+        private void ListCustomer_SelectedValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

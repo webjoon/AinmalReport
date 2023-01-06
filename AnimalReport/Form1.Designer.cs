@@ -249,6 +249,7 @@
             this.ListCustomer.Size = new System.Drawing.Size(120, 88);
             this.ListCustomer.TabIndex = 0;
             this.ListCustomer.Click += new System.EventHandler(this.ListCustomer_Click);
+            this.ListCustomer.SelectedValueChanged += new System.EventHandler(this.ListCustomer_SelectedValueChanged);
             // 
             // dataGridView1
             // 

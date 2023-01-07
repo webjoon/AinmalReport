@@ -37,8 +37,8 @@ namespace AnimalReport
 
 
             ListCustomer.Items.Add(CustomerArrary[CustomerArrayIndex].FirstName);
-            dataGridView1.Rows.Add(CustomerArrary[CustomerArrayIndex].FirstName, CustomerArrary[CustomerArrayIndex].LastName);
-            CustomerArrayIndex++;-===
+            dataGridView1.Rows.Add(CustomerArrary[CustomerArrayIndex].FirstName, CustomerArrary[CustomerArrayIndex].LastName, CustomerArrary[CustomerArrayIndex].Agee);
+            CustomerArrayIndex++;
             
         }
 
@@ -74,9 +74,14 @@ namespace AnimalReport
             DescPanel.Visible = false;
         }
 
-        private void ListCustomer_SelectedValueChanged(object sender, EventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+            CusInputPanel.Visible = false;
+            DescPanel.Visible = true;
+            labelFrisstName.Text = (string)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+            labelLastName.Text = (string)dataGridView1.Rows[e.RowIndex].Cells[1].Value;
+            labelAddress.Text = (string)dataGridView1.Rows[e.RowIndex].Cells[2].Value;
         }
     }
 }

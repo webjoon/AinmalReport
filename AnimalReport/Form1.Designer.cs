@@ -246,10 +246,9 @@
             this.ListCustomer.ItemHeight = 21;
             this.ListCustomer.Location = new System.Drawing.Point(3, 3);
             this.ListCustomer.Name = "ListCustomer";
-            this.ListCustomer.Size = new System.Drawing.Size(120, 88);
+            this.ListCustomer.Size = new System.Drawing.Size(252, 88);
             this.ListCustomer.TabIndex = 0;
             this.ListCustomer.Click += new System.EventHandler(this.ListCustomer_Click);
-            this.ListCustomer.SelectedValueChanged += new System.EventHandler(this.ListCustomer_SelectedValueChanged);
             // 
             // dataGridView1
             // 
@@ -261,12 +260,15 @@
             this.Column4,
             this.Column5});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(319, 315);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Column1
             // 

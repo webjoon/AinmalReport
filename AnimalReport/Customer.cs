@@ -14,7 +14,7 @@ namespace AnimalReport
         public string Description;
 
         private DateTime _Birthday;
-        private int _Age;
+        private string Age;
 
         //Creator
         public Customer(string firstName, string lastName, string address, string description, DateTime birthday)
@@ -24,13 +24,13 @@ namespace AnimalReport
             this.Address = address;
             this.Description = description;
             this._Birthday = birthday;
-            this._Age = DateTime.Now.Year - birthday.Year;
+            this.Age = (DateTime.Now.Year - birthday.Year).ToString();
         }
 
-        int Age
+        public string Agee
         {
-            get { return _Age; }
-            set { _Age = value; }
+            get { return Age; }
+            set { Age = value; }
         }
         
         public string FullName

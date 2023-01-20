@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net;
+using Oracle.ManagedDataAccess.Client;
 
 namespace AnimalReport
 {
@@ -15,6 +16,8 @@ namespace AnimalReport
     {
         public Customer[] CustomerArrary = new Customer[10];
         public int CustomerArrayIndex = 0;
+        OracleConnection pgOraConn;
+        OracleCommand pgOraCmd;
 
         public CusMain()
         {
@@ -66,6 +69,8 @@ namespace AnimalReport
             DescPanel.Dock = DockStyle.Right;
             CusInputPanel.Dock = DockStyle.Right;
             CusInputPanel.Visible = false;
+
+            ConnectionDB("210.110.80.136", "ngt", "ngtdba", "ngtdba");
         }
 
         private void inputCustomerToolStripMenuItem_Click(object sender, EventArgs e)
@@ -80,8 +85,31 @@ namespace AnimalReport
             CusInputPanel.Visible = false;
             DescPanel.Visible = true;
             labelFrisstName.Text = (string)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
-            labelLastName.Text = (string)dataGridView1.Rows[e.RowIndex].Cells[1].Value;
-            labelAddress.Text = (string)dataGridView1.Rows[e.RowIndex].Cells[2].Value;
+            labelLastName.Text = (string)dataGridView1.Rows[e.RowIndex].Cells[1].Value; 
+            labelBirthday.Text = (string)dataGridView1.Rows[e.RowIndex].Cells[2].Value;
+            labelAddress.Text = (string)dataGridView1.Rows[e.RowIndex].Cells[3].Value;
+            labelDescription.Text = (string)dataGridView1.Rows[e.RowIndex].Cells[4].Value;
+        }
+
+        private bool ConnectionDB(string dbIp, string dbName, string dbId, string dbPw)
+        {
+            bool retValue = false;
+            try
+            {
+                pgOraConn = new OracleConnection($"Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST={dbIp})(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME={dbName})));User ID={dbId};Password={dbPw};Connection Timeout=15;");
+                pgOraConn.Open();
+                pgOraCmd = pgOraConn.CreateCommand();
+                MessageBox.Show("Success DB Connection", "Information");
+
+                retValue = true;
+            }
+            catch (Exception e)
+            {
+                retValue = false;
+                MessageBox.Show($"DB Connection fail. \n {e.Message}", "Error");
+            }
+
+            return retValue;
         }
     }
 }

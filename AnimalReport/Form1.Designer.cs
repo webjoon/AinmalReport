@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.DescPanel = new System.Windows.Forms.Panel();
+            this.labelDescription = new System.Windows.Forms.Label();
+            this.labelBirthday = new System.Windows.Forms.Label();
             this.labelAddress = new System.Windows.Forms.Label();
             this.labelLastName = new System.Windows.Forms.Label();
             this.labelFrisstName = new System.Windows.Forms.Label();
@@ -65,6 +67,8 @@
             // 
             // DescPanel
             // 
+            this.DescPanel.Controls.Add(this.labelDescription);
+            this.DescPanel.Controls.Add(this.labelBirthday);
             this.DescPanel.Controls.Add(this.labelAddress);
             this.DescPanel.Controls.Add(this.labelLastName);
             this.DescPanel.Controls.Add(this.labelFrisstName);
@@ -74,32 +78,50 @@
             this.DescPanel.Size = new System.Drawing.Size(319, 315);
             this.DescPanel.TabIndex = 0;
             // 
+            // labelDescription
+            // 
+            this.labelDescription.AutoSize = true;
+            this.labelDescription.Location = new System.Drawing.Point(17, 156);
+            this.labelDescription.Name = "labelDescription";
+            this.labelDescription.Size = new System.Drawing.Size(129, 21);
+            this.labelDescription.TabIndex = 4;
+            this.labelDescription.Text = "labelDescription";
+            // 
+            // labelBirthday
+            // 
+            this.labelBirthday.AutoSize = true;
+            this.labelBirthday.Location = new System.Drawing.Point(17, 120);
+            this.labelBirthday.Name = "labelBirthday";
+            this.labelBirthday.Size = new System.Drawing.Size(105, 21);
+            this.labelBirthday.TabIndex = 3;
+            this.labelBirthday.Text = "labelBirthday";
+            // 
             // labelAddress
             // 
             this.labelAddress.AutoSize = true;
             this.labelAddress.Location = new System.Drawing.Point(17, 81);
             this.labelAddress.Name = "labelAddress";
-            this.labelAddress.Size = new System.Drawing.Size(54, 21);
+            this.labelAddress.Size = new System.Drawing.Size(105, 21);
             this.labelAddress.TabIndex = 2;
-            this.labelAddress.Text = "label6";
+            this.labelAddress.Text = "labelAddress";
             // 
             // labelLastName
             // 
             this.labelLastName.AutoSize = true;
             this.labelLastName.Location = new System.Drawing.Point(17, 47);
             this.labelLastName.Name = "labelLastName";
-            this.labelLastName.Size = new System.Drawing.Size(54, 21);
+            this.labelLastName.Size = new System.Drawing.Size(117, 21);
             this.labelLastName.TabIndex = 1;
-            this.labelLastName.Text = "label6";
+            this.labelLastName.Text = "labelLastName";
             // 
             // labelFrisstName
             // 
             this.labelFrisstName.AutoSize = true;
             this.labelFrisstName.Location = new System.Drawing.Point(17, 13);
             this.labelFrisstName.Name = "labelFrisstName";
-            this.labelFrisstName.Size = new System.Drawing.Size(54, 21);
+            this.labelFrisstName.Size = new System.Drawing.Size(126, 21);
             this.labelFrisstName.TabIndex = 0;
-            this.labelFrisstName.Text = "label6";
+            this.labelFrisstName.Text = "labelFrisstName";
             // 
             // CusInputPanel
             // 
@@ -316,7 +338,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 425);
+            this.ClientSize = new System.Drawing.Size(801, 424);
             this.Controls.Add(this.CusListBoxPanel);
             this.Controls.Add(this.DescPanel);
             this.Controls.Add(this.menuStrip1);
@@ -368,5 +390,7 @@
         private Label labelFrisstName;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem inputCustomerToolStripMenuItem;
+        private Label labelDescription;
+        private Label labelBirthday;
     }
 }

@@ -1,8 +1,24 @@
 {
   "version": 2,
-  "dgSpecHash": "ZpkxBeH5Di3RnTS0uKZc9Xn7UcfVh7tRp94a4fRRgTpHBtdwzXdoURvrhORhwRHdRLlwqkzdZjIQcf780SugWg==",
+  "dgSpecHash": "8Z2qfCNpPRY+Br8pM4kwOMDxrMPlfDenJoEuj98L6/RNkn8yKvUMDzVBh92SCxwjROtF2FzqaKkBKWAMKt2h+w==",
   "success": true,
   "projectFilePath": "C:\\Users\\admin\\Source\\Repos\\webjoon\\AinmalReport\\AnimalReport\\AnimalReport.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\admin\\.nuget\\packages\\oracle.manageddataaccess\\21.9.0\\oracle.manageddataaccess.21.9.0.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "프로젝트 대상 프레임워크 'net6.0-windows7.0' 대신 '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8'을(를) 사용하여 패키지 'Oracle.ManagedDataAccess 21.9.0'을(를) 복원했습니다. 이 패키지는 프로젝트와 완벽하게 호환되지 않을 수 있습니다.",
+      "libraryId": "Oracle.ManagedDataAccess",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
 }

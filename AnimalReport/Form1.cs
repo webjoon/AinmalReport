@@ -70,7 +70,7 @@ namespace AnimalReport
             CusInputPanel.Dock = DockStyle.Right;
             CusInputPanel.Visible = false;
 
-            ConnectionDB("210.110.80.136", "ngt", "ngtdba", "ngtdba");
+            ConnectionDB("210.110.80.xxx", "xxx", "xxxxxx", "xxxxxx");
         }
 
         private void inputCustomerToolStripMenuItem_Click(object sender, EventArgs e)
